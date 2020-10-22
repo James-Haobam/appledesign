@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins',sans-serif;
+    position: relative;
+
+}
+header{
+    width: 100%;
+    padding: 10px 0 0;
+    margin-bottom: 5px;
+}
+header .container{
+    height: 10vh;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-container , .links , .some-logo{
+    display: flex ;
+
+}
+.logo-container img{
+    width: 50px;
+}
+.logo-container{
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar{
+    flex: 2;
+ 
+    
+}
+.some-logo{
+    flex: 1;
+    justify-content: flex-end;
+   
+}
+.some-logo img{
+    width: 20px;
+    text-align: right;
+}
+.links{
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+.links .link{
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+.iphone-img{
+    flex-basis: 50%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 80vh;
+    animation: phone 0.7s linear;
+
+}
+.iphone-img img{
+    width: 300px;
+   
+    filter: drop-shadow(0px 7px 4px #000);
+
+}
+.main-container{
+    height: 80vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.intro{
+    flex: 1;
+    padding: 5%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: auto;
+    animation: fadein 0.3s linear;
+    animation-delay: 0.7s;
+    animation-fill-mode: backwards;
+    max-height: 300px;
+}
+.intro-text h1{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background: linear-gradient(to right,#595961,#111116);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadein 0.3s linear;
+    animation-delay: 0.7s;
+    animation-fill-mode: backwards;
+} 
+.intro-text p{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #111116;
+    animation: fadein 0.3s linear;
+    animation-delay: 0.9s;
+    animation-fill-mode: backwards;
+
+}
+.btn{
+    padding: 10px 2px ;
+    width: 130px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: box-shadow 0.4s ease ;
+}
+
+.btn:nth-child(1){
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    animation: fadein 0.3s linear;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+.btn:nth-child(2){
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    margin-left: 10px;
+    animation: fadein 0.3s linear;
+    animation-delay: 1.3s;
+    animation-fill-mode: backwards;
+}
+/* ----hover state---- */
+.btn:hover{
+    box-shadow: 3px 4px 8px grey;
+}
+/* ---------end---------- */
+
+.bg-logo{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+;
+    z-index: -111;
+    width: 500px;
+    height: auto;
+    
+    opacity: 0.2;
+    pointer-events: none;
+}
+footer{
+    background-color: #595961;
+}
+footer .footer{
+    width: 90%;
+    padding: 20px 0;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
+
+@keyframes phone{
+    from{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* -----------mobile friendly----------- */
+
+@media screen and (max-width:1070px){
+    .main-container{
+        flex-direction: column;
+    }
+    header .container{
+        height: 10vh;
+
+    }
+    .iphone-img img{
+        height: 66vh;
+        width: 250px;
+    }
+    .main-container{
+        height: auto;
+    }
+    .intro{
+        text-align: center;
+    }
+    .intro-text h1{
+        font-size:33px ;
+    }
+    .intro-text p{
+        font-size: 17px;
+    }
+    .btn{
+        padding: 3% 4%;
+    }
+}
+@media screen and (max-width:500px){
+    .intro-text h1{
+        font-size:30px ;
+    }
+    .intro-text p{
+        font-size: 15px;
+    }
+    .btn{
+        padding: 2% 3%;
+    }
+
+}
